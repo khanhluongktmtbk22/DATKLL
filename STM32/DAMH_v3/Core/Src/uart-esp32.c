@@ -10,5 +10,5 @@
 extern UART_HandleTypeDef huart1;
 
 HAL_StatusTypeDef UART_SendString(const char *data) {
-    return HAL_UART_Transmit(&huart1, (uint8_t *)data, sizeof(data), 1000);
+    return HAL_UART_Transmit(&huart1, (uint8_t *)data, strlen(data), 1000);
 }

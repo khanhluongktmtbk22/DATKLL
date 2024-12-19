@@ -9,6 +9,7 @@
 #define INC_UART_ESP32_H_
 
 #include "stm32f1xx_hal.h"
+#include "string.h"
 
 HAL_StatusTypeDef UART_SendString(const char *data);
 
