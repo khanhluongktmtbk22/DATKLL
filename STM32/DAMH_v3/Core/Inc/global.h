@@ -21,6 +21,9 @@
 
 #include "fsm_main.h"
 
+#define NUM_LEDS 1
+extern uint16_t pwm_data[NUM_LEDS * 24 + 50];
+
 typedef enum {
 	INIT,
     READING,

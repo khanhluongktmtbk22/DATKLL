@@ -1,4 +1,4 @@
-Core/Src/led.o: ../Core/Src/led.c ../Core/Inc/led.h ../Core/Inc/main.h \
+Core/Src/led.o: ../Core/Src/led.c ../Core/Inc/led.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
@@ -30,8 +30,6 @@ Core/Src/led.o: ../Core/Src/led.c ../Core/Inc/led.h ../Core/Inc/main.h \
  ../Core/Inc/uart-esp32.h ../Core/Inc/fsm_main.h
 
 ../Core/Inc/led.h:
-
-../Core/Inc/main.h:
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 

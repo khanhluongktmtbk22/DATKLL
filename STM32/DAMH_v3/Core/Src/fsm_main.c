@@ -47,16 +47,7 @@ void fsm_main(){
                 last_humidity = sensor_data.humidity; // Cập nhật giá trị cũ
             }
 
-            // Gửi dữ liệu qua UART
-//            sprintf(buffer1, "TEMP:%.1f", sensor_data.temperature);
-//            sprintf(buffer2, "HUMI:%.1f", sensor_data.humidity);
-//            sprintf(sendBuffer, "%s;%s\n", buffer1, buffer2);
-//            UART_SendString(sendBuffer);
-
-
-//            // Xử lý LED
-//            HAL_Delay(1000);
-//            HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+            Led_RGB_temp();
 
             // Quay lại trạng thái đọc dữ liệu
             current_state = READING;
