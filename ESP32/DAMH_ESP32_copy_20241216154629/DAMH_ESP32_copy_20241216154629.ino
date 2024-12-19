@@ -761,7 +761,7 @@ void setup() {
   Serial.begin(115200);
   
   // Khởi tạo UART2
-  STM32Serial.begin(9600, SERIAL_8N1, 16, 17);
+  STM32Serial.begin(115200, SERIAL_8N1, 16, 17);
   Serial.println("UART2 Initialized at 9600 baud");
 
   WiFi.begin(ssid, password);

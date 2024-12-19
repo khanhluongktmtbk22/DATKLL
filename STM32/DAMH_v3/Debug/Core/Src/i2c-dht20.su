@@ -1,0 +1,2 @@
+i2c-dht20.c:12:19:DHT20_Init	24	static
+i2c-dht20.c:23:19:DHT20_Read	48	static

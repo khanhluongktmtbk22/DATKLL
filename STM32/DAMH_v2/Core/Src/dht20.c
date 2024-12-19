@@ -15,7 +15,7 @@ HAL_StatusTypeDef DHT20_Init(I2C_HandleTypeDef *hi2c) {
     HAL_StatusTypeDef ret;
 
     // Gửi lệnh khởi tạo
-    ret = HAL_I2C_Master_Transmit(hi2c, DHT20_I2C_ADDRESS, init_data, 3, HAL_MAX_DELAY);
+    ret = HAL_I2C_Master_Transmit(hi2c, DHT20_I2C_ADDRESS, init_data, 3, 2000);
     HAL_Delay(10); // Đợi cảm biến khởi động
     return ret;
 }
@@ -27,7 +27,7 @@ HAL_StatusTypeDef DHT20_Read(I2C_HandleTypeDef *hi2c, DHT20_Data *data) {
 
     // Gửi yêu cầu đọc dữ liệu
     uint8_t request_data[3] = {read_command, 0x33, 0x00};
-    ret = HAL_I2C_Master_Transmit(hi2c, DHT20_I2C_ADDRESS, request_data, 3, HAL_MAX_DELAY);
+    ret = HAL_I2C_Master_Transmit(hi2c, DHT20_I2C_ADDRESS, request_data, 3, 2000);
     if (ret != HAL_OK) return ret;
 
     // Chờ một chút trước khi đọc
